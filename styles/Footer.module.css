@@ -1,0 +1,49 @@
+.main {
+  background-color: #a9b7c0;
+  width: 100vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h4 {
+  font-family: 'Josefin Slab';
+  color: white;
+  text-align: center;
+  font-size: 5vw;
+  margin: 1rem 0 .5rem 0;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav a {
+  padding: 0 .5rem;
+  margin: .5rem;
+  font-size: 3vw;
+  font-variant: small-caps;
+  font-family: 'Josefin Slab';
+  color: white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  transition: all .2s ease-in-out;
+}
+
+.nav a:hover {
+  color: #474747;
+  transform: scale(1.1);
+  border-left: 1px solid #474747;
+  border-right: 1px solid #474747;
+}
+
+.main address {
+  margin:.5rem;
+  font-family: 'Roboto';
+  font-size: 2vw;
+  color: white;
+}

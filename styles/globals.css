@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@700&family=Roboto&display=swap');
 html,
 body {
+  background-color: #c7d8c6;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
 }
 
 a {

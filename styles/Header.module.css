@@ -1,0 +1,133 @@
+.main {
+  position: fixed;
+  top:0;left:0;right:0;
+  height: 43vw;
+  background-color: #a9b7c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main h1{
+  text-shadow: #4e5e69 1px 0 10px;
+  padding-top: 12vw;
+  margin-bottom: .5rem;
+  font-size: 8vw;
+  border-bottom: 1px solid white;
+  color: white;
+}
+.main h2 {
+  color: #474747;
+  font-size: 6vw;
+}
+
+.main nav button {
+  text-shadow: #4e5e69 1px 0 10px;
+  color:white;
+  font-family: "Josefin Slab";
+  position: fixed;
+  top:.5rem;right:.5rem;
+  background-color: #a9b7c0;
+  border-top:1px solid white;
+  border-left:none;
+  border-right: none;
+  border-bottom:1px solid white;
+  font-size: 3vw;
+  padding: .5rem 0;
+  width:27vw;
+  max-width: 8rem;
+  transition: all .2s ease-in-out;
+}
+
+.main nav button:hover {
+  transform: scale(1.1);
+  color: #474747;
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+}
+
+.main nav div {
+  display:none;
+}
+
+.dropdown {
+  display:flex;
+  box-shadow: 0px 0px 7px 3px white;
+  background-color: #a9b7c0;
+  position: fixed;
+  padding:1rem;
+  top: 15vw;right: 0;
+  margin: .5rem;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.main div {
+  display: none;
+}
+
+.main div a {
+  color: white;
+  text-shadow: #4e5e69 1px 0 10px;
+  font-family: 'Josefin Slab';
+  font-variant: small-caps;
+  text-align: center;
+  font-size: 5vw;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: .25rem;
+  padding: 1rem 0;
+  width:22vw;
+  transition: all .2s ease-in-out;
+}
+
+.main div a:hover {
+  transform: scale(1.1);
+  color: #474747;
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+}
+
+@media only screen and (min-width: 620px){
+  .main {
+    height: 240px;
+  }
+
+  .main h1{
+    padding-top: 4.5rem;
+    font-size: 3rem;
+  }
+
+  .main h2 {
+    margin-top: .75rem;
+    font-size: 2.5rem;
+  }
+
+  .main nav button {
+    display: none;
+    font-size: 1rem;;
+  }
+
+  .dropdown {
+    border: none;
+    display: none;
+    flex-direction: row;
+    padding:1rem;
+    top: 0rem;right: 0;
+  }
+
+  .main div a {
+    font-size: 1.5rem;
+    padding: .75rem 0;
+    width: 6rem;
+  }
+
+  .main nav div {
+    display:flex;
+    position: fixed;
+    top:.5rem;right:.5rem;
+    flex-direction: row;
+    border: none;
+  }
+
+}
