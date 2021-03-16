@@ -136,7 +136,8 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
 
   return (
     <div className={styles.container}>
-      <Header id="home">Welcome to the home of healthy shakes and teas in downtown Lancaster, Pa!</Header>
+      <Header>Welcome to the home of healthy shakes and teas in downtown Lancaster, Pa!</Header>
+      <span className={styles.anchor} id="home"/>
       <Banner/>
       <div className={styles.announcements}>
         {message1}
