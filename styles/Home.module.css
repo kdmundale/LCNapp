@@ -5,7 +5,7 @@
 }
 
 .main {
-  margin-top: 50vw;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5rem;
@@ -55,7 +55,7 @@
 }
 
 .main div a div {
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.7);
   width: 100%;
   padding: 1rem 0;
   font-family: 'Josefin Slab';
@@ -65,25 +65,25 @@
 }
 
 #pic1 {
-  background-image: url("../public/images/IMG_1.jpg");
+  background-image: url("../public/images/4_shakes_e.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #pic2 {
-  background-image: url("../public/images/IMG_3.jpg");
+  background-image: url("../public/images/blue_tea_e.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #pic3 {
-  background-image: url("../public/images/IMG_4.jpg");
+  background-image: url("../public/images/snacks_2_e.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 #pic4 {
-  background-image: url("../public/images/IMG_6.jpg");
+  background-image: url("../public/images/logo_e.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -98,10 +98,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("../public/images/IMG_4.jpg");
+  background-image: url("../public/images/herbalife_e.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all .2s ease-in-out;
+}
+
+#pic5:hover{
+  transform: scale(1.1);
 }
 
 #pic5 div{
@@ -127,6 +132,7 @@
   text-align: center;
   font-size: 2.5rem;
 }
+
 #shakeMenu h2 {
   color: #474747;
   text-align: center;
@@ -161,13 +167,11 @@
   justify-content: center;
   width:30vw;
   margin: 1rem;
-  border: 1px solid white;
   text-align: center;
 }
 
 @media only screen and (min-width: 620px){
   .main {
-    margin-top:300px;
     width:80%;
   }
 
@@ -197,11 +201,16 @@
   #pic5 div {
     font-size: 3rem;
   }
+
+  #shakeMenu section div {
+    font-size: 1.7rem;
+  }
 }
 
 @media only screen and (min-width: 1020px){
 
   .main {
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -217,6 +226,11 @@
     display: inline-grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: .5rem;
+  }
+
+  #shakeMenu {
+    width: 80%;
+    max-width: 1200px;
   }
 
   #pic5 {

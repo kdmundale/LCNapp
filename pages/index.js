@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Banner from '../components/PhotoBanner'
 import Link from 'next/link'
 const db = require('../db')
 
@@ -49,25 +50,15 @@ export async function getStaticProps () {
   }
   try {
     const res1 = await db.query(query1)
-    console.log("!!", res1.rowCount)
     const res2 = await db.query(query2)
-    console.log("!!!!", res2.rowCount)
     const res3 = await db.query(query3)
-    console.log("!!!!!!!!", res3.rowCount)
     const res4 = await db.query(query4)
-    console.log("!!!!!!!!!!", res4.rowCount)
     const res5 = await db.query(query5)
-    console.log("!!!!!!!!!!!!", res5.rowCount)
     const res6 = await db.query(query6)
-    console.log("!!!!!!!!!!!!!!", res6.rowCount)
     const res7 = await db.query(query7)
-    console.log("!!!!!!!!!!!!!!", res7.rowCount)
     const res8 = await db.query(query8)
-    console.log("!!!!!!!!!!!!!!", res8.rowCount)
     const res9 = await db.query(query9)
-    console.log("!!!!!!!!!!!!!!", res9.rowCount)
     const res10 = await db.query(query10)
-    console.log("!!!!!!!!!!!!!!", res10.rowCount)
     const shakeData2 = res2.rows
     const shakeData1 = res1.rows
     const shakeData3 = res3.rows
@@ -122,6 +113,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
   return (
     <div className={styles.container}>
       <Header>LCN Home</Header>
+      <Banner/>
       <article className={styles.main}>
       <h3>Welcome to the home of healthy shakes and teas in downtown Lancaster, Pa!</h3>
       <section>
