@@ -28,6 +28,7 @@ export default function Banner(){
     arrows={false}
     infinite={true}
     autoPlay={true}
+    ssr={true}
     autoPlaySpeed={4000}
     className={styles.main}
     partialVisible={false}
