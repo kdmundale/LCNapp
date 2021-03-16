@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from '../styles/Footer.module.css'
+import Image from 'next/image'
 
 export default function Footer(){
 
@@ -30,6 +31,14 @@ export default function Footer(){
           <p>307 North Queen Street - Lancaster, PA 17603</p>
           <p><a href="tel:1-717-945-6741">717.945.6741</a></p>
         </address>
+
+
+    <aside>
+      <a target="blank" href="https://www.kdmundale.com">
+        <p>site by KDMundale, 2021</p>
+      </a>
+    </aside>
+
 
     </footer>
   )

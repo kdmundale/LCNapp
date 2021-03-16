@@ -7,7 +7,14 @@ import Link from 'next/link'
 const db = require('../db')
 
 export async function getStaticProps () {
-
+  const messQuery1 = {
+    text:'SELECT * FROM messages WHERE cont_id = $1',
+    values:[1],
+  }
+  const messQuery2 = {
+    text:'SELECT * FROM messages WHERE cont_id = $1',
+    values:[2],
+  }
   const query1 = {
     text: 'SELECT * FROM shakes WHERE shake_group = $1 AND available=$2',
     values:[1,true],
@@ -59,6 +66,9 @@ export async function getStaticProps () {
     const res8 = await db.query(query8)
     const res9 = await db.query(query9)
     const res10 = await db.query(query10)
+    const messRes1= await db.query(messQuery1)
+    const messRes2= await db.query(messQuery2)
+    console.log(messRes1.rowCount)
     const shakeData2 = res2.rows
     const shakeData1 = res1.rows
     const shakeData3 = res3.rows
@@ -69,53 +79,76 @@ export async function getStaticProps () {
     const shakeData8 = res8.rows
     const shakeData9 = res9.rows
     const shakeData10 = res10.rows
+    const msg1 = messRes1.rows
+    const msg2 = messRes2.rows
     return {
-      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10}
+      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,msg1,msg2}
     }
   } catch (err) {
     console.log(err.stack)
   }
 }
 
-export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10}) {
+export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10, msg1, msg2}) {
 
+  const message1 = msg1.map((c) =>
+      <div key={c.id}>
+      <h4>{c.title}</h4>
+      <p>{c.body}</p>
+      </div>
+  )
+  const message2 = msg2.map((c) =>
+      <div key={c.id}>
+      <h4>{c.title}</h4>
+      <p>{c.body}</p>
+      </div>
+  )
   const shakes1 = shakeData1.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes2 = shakeData2.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes3 = shakeData3.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes4 = shakeData4.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes5 = shakeData5.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes6 = shakeData6.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes7 = shakeData7.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes8 = shakeData8.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes9 = shakeData9.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
   const shakes10 = shakeData10.map((c) =>
-      <p>{c.name}</p>
+      <p key={c.id}>{c.name}</p>
   )
 
   return (
     <div className={styles.container}>
-      <Header>LCN Home</Header>
+      <Header id="home">Welcome to the home of healthy shakes and teas in downtown Lancaster, Pa!</Header>
       <Banner/>
+      <div className={styles.announcements}>
+        {message1}
+        {message2}
+      </div>
       <article className={styles.main}>
-      <h3>Welcome to the home of healthy shakes and teas in downtown Lancaster, Pa!</h3>
+
+      <address>
+        <p><a target="blank" href="https://goo.gl/maps/HJmz6YyMfApLFjr16">307 North Queen Street - Lancaster, PA 17603</a></p>
+        <p><a href="tel:1-717-945-6741">717.945.6741</a></p>
+      </address>
+
       <section>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
         metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
@@ -127,14 +160,14 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
       </section>
 
       <div className={styles.nav}>
-          <Link href="/">
-            <a id={styles.pic1}><div>shakes</div></a>
+          <Link href="#menu">
+            <a id={styles.pic1}><div>drink menu</div></a>
           </Link>
           <Link href="/">
-            <a id={styles.pic2}><div>teas</div></a>
+            <a id={styles.pic2}><div>specials</div></a>
           </Link>
           <Link href="/">
-            <a id={styles.pic3}><div>snacks</div></a>
+            <a id={styles.pic3}><div>treats</div></a>
           </Link>
           <Link href="/">
             <a id={styles.pic4}><div>about us</div></a>
@@ -156,65 +189,99 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
       </section>
       </article>
       <article id={styles.shakeMenu}>
-      <h1>Menu</h1>
         <section>
+          <span className={styles.anchor} id="menu"/>
+          <h1>Drink Menu</h1>
+          <div id={styles.menuLinkHolder}>
+          <Link href="#group1"><a>group 1</a></Link>
+          <Link href="#group2"><a>group 2</a></Link>
+          <Link href="#group3"><a>group 3</a></Link>
+          <Link href="#group4"><a>group 4</a></Link>
+          <Link href="#group5"><a>group 5</a></Link>
+          <Link href="#group6"><a>group 6</a></Link>
+          <Link href="#group7"><a>group 7</a></Link>
+          <Link href="#group8"><a>group 8</a></Link>
+          <Link href="#group9"><a>group 9</a></Link>
+          <Link href="#group10"><a>group 10</a></Link>
+          <Link href="#treats"><a>treats</a></Link>
+          </div>
+          <span className={styles.anchor} id="group1"/>
           <h2>Group 1</h2>
           <div>
             {shakes1}
           </div>
         </section>
         <section>
+          <span className={styles.anchor} id="group2"/>
           <h2>Group 2</h2>
           <div>
             {shakes2}
           </div>
         </section>
         <section>
+          <span className={styles.anchor} id="group3"/>
           <h2>Group 3</h2>
           <div>
             {shakes3}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group4"/>
           <h2>Group 4</h2>
           <div>
             {shakes4}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group5"/>
           <h2>Group 5</h2>
           <div>
             {shakes5}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group6"/>
           <h2>Group 6</h2>
           <div>
             {shakes6}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group7"/>
           <h2>Group 7</h2>
           <div>
             {shakes7}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group8"/>
           <h2>Group 8</h2>
           <div>
             {shakes8}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group9"/>
           <h2>Group 9</h2>
           <div>
             {shakes9}
           </div>
         </section>
         <section>
+        <span className={styles.anchor} id="group10"/>
           <h2>Group 10</h2>
           <div>
             {shakes10}
+          </div>
+        </section>
+        <section>
+        <span className={styles.anchor} id="treats"/>
+          <h2>Treats</h2>
+          <span className={styles.detail}>stop in to see what's available!</span>
+          <div>
+            <p>protein doughnuts</p>
+            <p>protein balls</p>
+            <p>protein bars</p>
           </div>
         </section>
       </article>

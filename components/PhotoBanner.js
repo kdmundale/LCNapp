@@ -12,28 +12,26 @@ export default function Banner(){
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4
+      items: 5
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 3
+      breakpoint: { max: 1024, min: 720 },
+      items: 4
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
+      breakpoint: { max: 720, min: 0 },
+      items: 2
     }
   };
   return(
   <Carousel
     arrows={false}
-    ssr={true} // means to render carousel on server-side.
     infinite={true}
     autoPlay={true}
     autoPlaySpeed={4000}
     className={styles.main}
     partialVisible={false}
     responsive={responsive}
-    partialVisible={true}
     transitionDuration={700}>
     <div>
     <Image

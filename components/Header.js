@@ -23,6 +23,8 @@ export default function Header({children}){
       <div>
       <Link className={styles.dropdownLink} href="/"><a>login</a></Link>
       <Link className={styles.dropdownLink} href="/"><a>register</a></Link>
+      <Link className={styles.dropdownLink} href="#menu"><a>menu</a></Link>
+      <Link className={styles.dropdownLink} href="#home"><a>home</a></Link>
       </div>
       </nav>
       <div className={styles.dropdown}
@@ -31,6 +33,8 @@ export default function Header({children}){
         >
         <Link className={styles.dropdownLink} href="/"><a>login</a></Link>
         <Link className={styles.dropdownLink} href="/"><a>register</a></Link>
+        <Link className={styles.dropdownLink} href="#menu"><a>menu</a></Link>
+        <Link className={styles.dropdownLink} href="/"><a>home</a></Link>
       </div>
     </section>
   )
