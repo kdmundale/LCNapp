@@ -142,51 +142,52 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
         {message1}
         {message2}
       </div>
+
       <article className={styles.main}>
 
-      <address>
-        <p><a target="blank" href="https://goo.gl/maps/HJmz6YyMfApLFjr16">307 North Queen Street - Lancaster, PA 17603</a></p>
-        <p><a href="tel:1-717-945-6741">717.945.6741</a></p>
-      </address>
+        <address>
+          <p><a target="blank" href="https://goo.gl/maps/HJmz6YyMfApLFjr16">307 North Queen Street - Lancaster, PA 17603</a></p>
+          <p><a href="tel:1-717-945-6741">717.945.6741</a></p>
+        </address>
 
-      <section>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
-        metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
-        quis fringilla arcu posuere. In turpis tellus, auctor vel semper quis,
-        tincidunt ornare magna. Aenean venenatis iaculis tortor sed suscipit. Morbi
-        congue suscipit imperdiet. Sed id risus scelerisque, vulputate eros sit
-        amet, suscipit libero. Donec aliquet viverra nulla, sed rhoncus lectus
-        congue non.</p>
-      </section>
+        <section>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
+          metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
+          quis fringilla arcu posuere. In turpis tellus, auctor vel semper quis,
+          tincidunt ornare magna. Aenean venenatis iaculis tortor sed suscipit. Morbi
+          congue suscipit imperdiet. Sed id risus scelerisque, vulputate eros sit
+          amet, suscipit libero. Donec aliquet viverra nulla, sed rhoncus lectus
+          congue non.</p>
+        </section>
 
-      <div className={styles.nav}>
-          <Link href="#menu">
-            <a id={styles.pic1}><div>drink menu</div></a>
-          </Link>
+        <div className={styles.nav}>
+            <Link href="#menu">
+              <a id={styles.pic1}><div>drink menu</div></a>
+            </Link>
+            <Link href="/">
+              <a id={styles.pic2}><div>specials</div></a>
+            </Link>
+            <Link href="/">
+              <a id={styles.pic3}><div>treats</div></a>
+            </Link>
+            <Link href="/">
+              <a id={styles.pic4}><div>about us</div></a>
+            </Link>
+        </div>
+
+        <section id={styles.herbalife}>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
+          metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
+          quis fringilla arcu posuere. In turpis tellus, auctor vel semper quis,
+          tincidunt ornare magna. Aenean venenatis iaculis tortor sed suscipit. Morbi
+          congue suscipit imperdiet. Sed id risus scelerisque, vulputate eros sit
+          amet, suscipit libero. Donec aliquet viverra nulla, sed rhoncus lectus
+          congue non.</p>
+
           <Link href="/">
-            <a id={styles.pic2}><div>specials</div></a>
+            <a id={styles.pic5}><div>herbalife</div></a>
           </Link>
-          <Link href="/">
-            <a id={styles.pic3}><div>treats</div></a>
-          </Link>
-          <Link href="/">
-            <a id={styles.pic4}><div>about us</div></a>
-          </Link>
-      </div>
-
-      <section id={styles.herbalife}>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
-        metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
-        quis fringilla arcu posuere. In turpis tellus, auctor vel semper quis,
-        tincidunt ornare magna. Aenean venenatis iaculis tortor sed suscipit. Morbi
-        congue suscipit imperdiet. Sed id risus scelerisque, vulputate eros sit
-        amet, suscipit libero. Donec aliquet viverra nulla, sed rhoncus lectus
-        congue non.</p>
-
-        <Link href="/">
-          <a id={styles.pic5}><div>herbalife</div></a>
-        </Link>
-      </section>
+        </section>
       </article>
       <article id={styles.shakeMenu}>
         <section>
