@@ -27,8 +27,7 @@ export default function Footer(){
     </div>
 
         <address>
-          <p>307 North Queen Street</p>
-          <p>Lancaster, PA 17603</p>
+          <p>307 North Queen Street - Lancaster, PA 17603</p>
           <p><a href="tel:1-717-945-6741">717.945.6741</a></p>
         </address>
 

@@ -8,6 +8,7 @@
 }
 
 .main h4 {
+  text-shadow: #4e5e69 1px 0 10px;
   font-family: 'Josefin Slab';
   color: white;
   text-align: center;
@@ -28,6 +29,7 @@
   font-size: 3vw;
   font-variant: small-caps;
   font-family: 'Josefin Slab';
+  text-shadow: #4e5e69 1px 0 10px;
   color: white;
   border-left: 1px solid white;
   border-right: 1px solid white;
@@ -42,8 +44,21 @@
 }
 
 .main address {
+  text-align: center;
   margin:.5rem;
+  padding: 0;
   font-family: 'Roboto';
+  text-shadow: #4e5e69 1px 0 10px;
   font-size: 2vw;
   color: white;
+}
+
+@media only screen and (min-width: 620px){
+  .main h4 {
+    font-size: 3rem;
+  }
+
+  .nav a {
+    font-size: 2rem;
+  }
 }
