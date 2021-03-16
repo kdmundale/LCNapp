@@ -167,7 +167,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
             <Link href="/">
               <a id={styles.pic2}><div>specials</div></a>
             </Link>
-            <Link href="/">
+            <Link href="#treats">
               <a id={styles.pic3}><div>treats</div></a>
             </Link>
             <Link href="/">
@@ -269,7 +269,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           </div>
         </section>
         <section>
-        <span className={styles.anchor} id="group10"/>
+        <span className={styles.anchor} id="teas"/>
           <h2>Group 10</h2>
           <div>
             {shakes10}

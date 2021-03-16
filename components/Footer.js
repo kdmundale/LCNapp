@@ -10,14 +10,14 @@ export default function Footer(){
     <h4>Lancaster City Nutrition</h4>
 
     <div className={styles.nav}>
-        <Link href="/">
+        <Link href="#menu">
           <a><div>shakes</div></a>
         </Link>
-        <Link href="/">
+        <Link href="#teas">
           <a><div>teas</div></a>
         </Link>
-        <Link href="/">
-          <a><div>snacks</div></a>
+        <Link href="#treats">
+          <a><div>treats</div></a>
         </Link>
         <Link href="/">
           <a><div>about</div></a>
