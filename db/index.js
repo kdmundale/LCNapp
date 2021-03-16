@@ -1,8 +1,8 @@
 const { Pool } = require('pg')
-const connectionString="postgresql://doadmin:show-password@db-postgresql-nyc3-84214-do-user-8838963-0.b.db.ondigitalocean.com:25060/defaultdb?"
+const connectionString="postgresql://doadmin:a5ruz097kqsk93xh@db-postgresql-nyc3-84214-do-user-8838963-0.b.db.ondigitalocean.com:25060/defaultdb"
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  connectionString: connectionString,
   ssl: {
     rejectUnauthorized: false,
   },
