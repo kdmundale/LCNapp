@@ -18,7 +18,7 @@ export default function Header({children}){
         type="button"
         name="button"
         alt="Site Links">
-        Login/Register
+        site menu
       </button>
       <div>
       <Link className={styles.dropdownLink} href="/"><a>login</a></Link>
