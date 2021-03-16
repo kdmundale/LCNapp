@@ -13,13 +13,14 @@ export default function Header({children}){
     <section className={styles.main}>
       <Link href="/"><a><h1>Lancaster City Nutrition</h1></a></Link>
       <h2>{children}</h2>
-      <nav>
+
       <button onClick={toggle}
         type="button"
         name="button"
         alt="Site Links">
         site menu
       </button>
+      <nav>
       <div>
       <Link className={styles.dropdownLink} href="/"><a>login</a></Link>
       <Link className={styles.dropdownLink} href="/"><a>register</a></Link>

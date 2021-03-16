@@ -10,6 +10,9 @@ export default function Footer(){
     <h4>Lancaster City Nutrition</h4>
 
     <div className={styles.nav}>
+        <Link href="#home">
+          <a><div>home</div></a>
+        </Link>
         <Link href="#menu">
           <a><div>shakes</div></a>
         </Link>
