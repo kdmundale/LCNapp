@@ -1,7 +1,45 @@
 .container {
+  width:100vw;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.anchor{
+  padding-top: 8.5rem;
+  visibility: hidden;
+}
+
+#banner {
+  border:2px solid black;
+}
+
+.announcements {
+  margin-top: 2rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.announcements div {
+  background-color: #59778f;
+  color: white;
+  text-align: center;
+  width:100%;
+  border: 1px solid grey;
+  margin: .5rem;
+}
+
+.announcements div h4{
+  font-size: 1.5rem;
+  margin: 1rem 0 0 0;
+}
+
+.announcements div p{
+  font-family: 'Roboto';
 }
 
 .main {
@@ -14,13 +52,38 @@
 }
 
 .main h3 {
-  color: #474747;
+
+  color: white;
+  text-shadow: #7a6248 3px 0 10px;
   text-align: center;
   display: block;
   font-size: 5vw;
   margin: 1rem .5rem 1rem .5rem;
   padding: .5rem;
-  font-family: 'Roboto';
+  font-family: "Josefin Slab";
+}
+
+.main address {
+  font-size: 1.25rem;
+  text-shadow: #354854 1px 0 10px;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bolder;
+  color: white;
+  background-color: #a9b7c0;
+  text-align: center;
+  padding: 1.5rem .5rem 1.5rem .5rem;
+  width: 100%;
+  margin:1.5rem 0;
+}
+
+.main address p {
+  transition: all .2s ease-in-out;
+}
+
+.main address p:hover {
+  color: #474747;
+  transform: scale(1.1);
 }
 
 .main section p {
@@ -133,20 +196,42 @@
   font-size: 2.5rem;
 }
 
+#menuLinkHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#menuLinkHolder a {
+  text-align: center;
+  background-color: #ebeef0;
+  width:10rem;
+  padding: 1rem;
+  margin: 1.5rem;
+}
+
+#menuLinkHolder a:hover{
+  text-shadow: #354854 1px 0 10px;
+  color:white;
+  background-color: #a9b7c0;
+}
+
 #shakeMenu h2 {
   color: #474747;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  padding-top: 1.5rem;
 }
 
 #shakeMenu section {
+  background-color: #d1dde6;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #shakeMenu section div{
   font-family: 'Josefin Slab';
-  background-color: #a9b7c0;
   font-size: 1.2rem;
   color: #474747;
   font-variant: small-caps;
@@ -159,19 +244,37 @@
 }
 
 #shakeMenu p{
-  text-shadow: #4e5e69 1px 0 10px;
-  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width:30vw;
+  width:10rem;
+  font-size: 1.5rem;
   margin: 1rem;
   text-align: center;
 }
 
+.detail{
+  display: block;
+  margin-top: 0;
+  font-family: 'Roboto';
+  font-size: 1rem;
+  text-decoration: none;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 620px){
   .main {
+    width:80%;
+  }
+
+  .anchor {
+    padding-top: 15rem;
+  }
+
+  .announcements{
     width:80%;
   }
 
@@ -216,6 +319,17 @@
     align-items: center;
   }
 
+  .announcements {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .announcements div{
+    width: 49%;
+    margin: 0;
+  }
+
   .main section p {
     margin-left: 2rem;
     margin-right: 2rem;
@@ -231,6 +345,10 @@
   #shakeMenu {
     width: 80%;
     max-width: 1200px;
+  }
+
+  #shakeMenu p {
+    width: 20rem;
   }
 
   #pic5 {

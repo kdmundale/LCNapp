@@ -1,5 +1,6 @@
 .main {
   position: fixed;
+  width:100vw;
   top:0;left:0;right:0;
   height: 43vw;
   background-color: #a9b7c0;
@@ -10,16 +11,18 @@
 }
 
 .main h1{
-  text-shadow: #4e5e69 1px 0 10px;
-  padding-top: 12vw;
-  margin-bottom: .5rem;
+  text-shadow: #354854 1px 0 10px;
+  padding-top: 10vw;
+  margin-bottom: 0rem;
   font-size: 8vw;
   border-bottom: 1px solid white;
   color: white;
 }
 .main h2 {
-  color: #474747;
-  font-size: 6vw;
+  text-align: center;
+  color: white;
+  text-shadow: #354854 1px 0 10px;
+  font-size: 5vw;
 }
 
 .main nav button {
@@ -48,6 +51,9 @@
 }
 
 .main nav div {
+  position: fixed;
+  justify-content: space-around;
+  top:.5rem;left:0;right:0;
   display:none;
 }
 
@@ -95,13 +101,15 @@
   }
 
   .main h1{
-    padding-top: 4.5rem;
+    padding-top: 3.75rem;
     font-size: 3rem;
   }
 
   .main h2 {
+    text-align: center;
+    width: 80%;
     margin-top: .75rem;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
 
   .main nav button {
@@ -126,7 +134,7 @@
   .main nav div {
     display:flex;
     position: fixed;
-    top:.5rem;right:.5rem;
+    top:.5rem;
     flex-direction: row;
     border: none;
   }
@@ -134,7 +142,5 @@
 }
 
 @media only screen and (min-width: 1000px){
-  .main div{
-    right:20%;
-  }
+
 }

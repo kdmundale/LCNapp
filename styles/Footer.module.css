@@ -26,7 +26,7 @@
 .nav a {
   padding: 0 .5rem;
   margin: .5rem;
-  font-size: 3vw;
+  font-size: 3.5vw;
   font-variant: small-caps;
   font-family: 'Josefin Slab';
   text-shadow: #4e5e69 1px 0 10px;
@@ -49,9 +49,47 @@
   padding: 0;
   font-family: 'Roboto';
   text-shadow: #4e5e69 1px 0 10px;
-  font-size: 2vw;
+  font-size: 3.5vw;
   color: white;
 }
+
+.main aside {
+  width: 50%;
+  font-size: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  font-family: 'Roboto';
+  color:white;
+}
+
+.main aside:hover{
+  text-decoration: underline;
+  -webkit-animation: shimmy .25s linear;
+     -moz-animation: shimmy .25s linear;
+       -o-animation: shimmy .25s linear;
+          animation: shimmy .25s linear;
+}
+
+@keyframes shimmy {
+  0%{
+    transform: translate3d(15px, 0px, 0px);
+  }
+  25%{
+    transform: translate3d(0px, 0px, 13px);
+  }
+  50%{
+    transform: translate3d(8px, 0px, 0px);
+  }
+  75%{
+    transform: translate3d(0px, 0px, 5px);
+  }
+  100%{
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
 
 @media only screen and (min-width: 620px){
   .main h4 {
