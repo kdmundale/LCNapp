@@ -2,7 +2,7 @@
   position: fixed;
   width:100vw;
   top:0;left:0;right:0;
-  height: 43vw;
+  height: 41.5vw;
   background-color: #a9b7c0;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
 
 .main h1{
   text-shadow: #354854 1px 0 10px;
-  padding-top: 10vw;
+  padding-top: 9vw;
   margin-bottom: 0rem;
   font-size: 8vw;
   border-bottom: 1px solid white;
@@ -98,11 +98,11 @@
 
 @media only screen and (min-width: 620px){
   .main {
-    height: 240px;
+    height: 230px;
   }
 
   .main h1{
-    padding-top: 3.75rem;
+    padding-top: 3rem;
     font-size: 3rem;
   }
 
