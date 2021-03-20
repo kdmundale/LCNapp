@@ -153,7 +153,14 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
         {message1}
         {message2}
       </div>
-
+      <section id={styles.socialMediaLinks}>
+        <h3>follow us on our socials!</h3>
+        <div>
+          <Link href="https://www.facebook.com/Lancaster24fit"><a id={styles.facebook}></a></Link>
+          <Link href="https://www.instagram.com/lancastercitynutrition/"><a id={styles.instagram}></a></Link>
+          <Link href="/"><a id={styles.snapchat}></a></Link>
+        </div>
+      </section>
       <article className={styles.main}>
 
         <address>
@@ -255,27 +262,6 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           </div>
         </section>
         <section>
-        <span className={styles.anchor} id="group5"/>
-          <h2>Specialty Flavors</h2>
-          <div>
-            {shakes5}
-          </div>
-        </section>
-        <section>
-        <span className={styles.anchor} id="group6"/>
-          <h2>Lifted Mega Teas</h2>
-          <div>
-            {shakes6}
-          </div>
-        </section>
-        <section>
-        <span className={styles.anchor} id="group7"/>
-          <h2>Iced Coffees</h2>
-          <div>
-            {shakes7}
-          </div>
-        </section>
-        <section>
         <span className={styles.anchor} id="group8"/>
           <h2>Vegan Shake Options</h2>
           <div>
@@ -287,6 +273,27 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           <h2>Seasonal Shakes</h2>
           <div>
             {shakes9}
+          </div>
+        </section>
+        <section>
+        <span className={styles.anchor} id="group5"/>
+          <h2>Specialty Flavors</h2>
+          <div>
+            {shakes5}
+          </div>
+        </section>
+        <section>
+        <span className={styles.anchor} id="group7"/>
+          <h2>Iced Coffees</h2>
+          <div>
+            {shakes7}
+          </div>
+        </section>
+        <section>
+        <span className={styles.anchor} id="group6"/>
+          <h2>Lifted Mega Teas</h2>
+          <div>
+            {shakes6}
           </div>
         </section>
         <section>

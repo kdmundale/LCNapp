@@ -86,6 +86,59 @@
   transform: scale(1.1);
 }
 
+#socialMediaLinks {
+  margin-top: 2rem;
+  background-color: #a9b7c0;
+  padding: 1rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#socialMediaLinks h3{
+  font-size: 1.5rem;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: #354854 1px 0 10px;
+  margin-top: 0
+}
+
+#socialMediaLinks div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#socialMediaLinks div a {
+  background-color: #59778f;
+  border-radius: 25%;
+  height: 12vw; width:12vw;
+  box-shadow: 0px 0px 7px 3px #354854;
+}
+
+#facebook{
+  background-image: url("../public/facebook.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#instagram{
+  background-image: url("../public/instagram.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#snapchat{
+  background-image: url("../public/snapchat.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .main section p {
   color: #474747;
   text-align: justify;
@@ -205,9 +258,10 @@
 #menuLinkHolder a {
   text-align: center;
   background-color: #ebeef0;
-  width:10rem;
+  width:15rem;
   padding: 1rem;
   margin: 1.5rem;
+  box-shadow: 0px 0px 7px 3px white;
 }
 
 #menuLinkHolder a:hover{
@@ -353,7 +407,7 @@
   }
 
   #shakeMenu p {
-    width: 20rem;
+    width: 30rem;
   }
 
   #pic5 {
