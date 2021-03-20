@@ -154,7 +154,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
         {message2}
       </div>
       <section id={styles.socialMediaLinks}>
-        <h3>follow us on our socials!</h3>
+        <h3>follow us on our socials</h3>
         <div>
           <Link href="https://www.facebook.com/Lancaster24fit"><a id={styles.facebook}></a></Link>
           <Link href="https://www.instagram.com/lancastercitynutrition/"><a id={styles.instagram}></a></Link>

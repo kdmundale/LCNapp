@@ -90,7 +90,7 @@
   margin-top: 2rem;
   background-color: #a9b7c0;
   padding: 1rem;
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -332,6 +332,10 @@
     width:80%;
   }
 
+  #socialMediaLinks{
+    width:80%;
+  }
+
   .main h3 {
     font-size: 1.75rem;
   }
@@ -382,6 +386,10 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+  }
+
+  #socialMediaLinks div a {
+    height:7rem; width: 7rem;
   }
 
   .announcements div{
