@@ -96,6 +96,7 @@
   align-items: center;
 }
 #socialMediaLinks h3{
+  text-align: center;
   font-size: 1.5rem;
   font-variant: small-caps;
   color: white;
@@ -258,7 +259,7 @@
 #menuLinkHolder a {
   text-align: center;
   background-color: #ebeef0;
-  width:15rem;
+  width:10rem;
   padding: 1rem;
   margin: 1.5rem;
   box-shadow: 0px 0px 7px 3px white;
@@ -268,6 +269,12 @@
   text-shadow: #354854 1px 0 10px;
   color:white;
   background-color: #a9b7c0;
+}
+
+#shakeMenu h1{
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 #shakeMenu h2 {
@@ -306,6 +313,36 @@
   font-size: 1.5rem;
   margin: .5rem;
   text-align: center;
+}
+
+#shakeInfo{
+  padding-left: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+#shakeInfo ul {
+  text-align: center;
+  padding-inline-start: 0;
+  padding: .5rem;
+  background-color:  #ebeef0;
+  align-self: flex-start;
+  font-size: 1.75vw;
+  margin: .75rem;
+  font-variant: normal;
+  font-family: 'Roboto';
+  list-style: none;
+}
+
+#shakeMenu ul lh {
+  font-family: 'Josefin Slab';
+  font-size: 5.5vw;
+  text-decoration: underline;
+}
+
+#shakeMenu ul li {
+  margin: .25rem 0 .25rem 0;
+  font-size: 4.5vw;
 }
 
 .detail{
@@ -371,6 +408,28 @@
     margin:1rem .5rem;
     width: 15rem;
   }
+
+  #shakeMenu ul lh {
+    font-size: 1.5rem;
+  }
+
+  #shakeMenu ul li {
+    font-size: 1rem;
+  }
+
+  #shakeInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  #shakeInfo ul {
+    width:30%;
+    align-self: stretch;
+  }
+}
+
+@media only screen and (min-width:700px){
+
 }
 
 @media only screen and (min-width: 1020px){

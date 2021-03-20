@@ -19,9 +19,6 @@ export default function Footer(){
         <Link href="#teas">
           <a><div>teas</div></a>
         </Link>
-        <Link href="#treats">
-          <a><div>treats</div></a>
-        </Link>
         <Link href="/">
           <a><div>about</div></a>
         </Link>

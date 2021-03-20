@@ -194,15 +194,9 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
         </div>
 
         <section id={styles.herbalife}>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec blandit
-          metus eget iaculis fermentum. Pellentesque lobortis urna id leo dictum,
-          quis fringilla arcu posuere. In turpis tellus, auctor vel semper quis,
-          tincidunt ornare magna. Aenean venenatis iaculis tortor sed suscipit. Morbi
-          congue suscipit imperdiet. Sed id risus scelerisque, vulputate eros sit
-          amet, suscipit libero. Donec aliquet viverra nulla, sed rhoncus lectus
-          congue non.</p>
-
-          <Link href="/">
+          <p>Serving up fast delicious Shakes and Smoothies, Energy Teas, and many other awesome products. Something for everyone!! Daily shake specials and free personal wellness evaluations available.</p>
+          <p>Contact Alisha for a wellness consultation today!</p>
+          <Link href="http://www.goherbalife.com/ahaas/en-Us">
             <a id={styles.pic5}><div>herbalife</div></a>
           </Link>
         </section>
@@ -210,7 +204,33 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
       <article id={styles.shakeMenu}>
         <section>
           <span className={styles.anchor} id="menu"/>
-          <h1>Drink Menu</h1>
+          <div>
+          <aside id={styles.shakeInfo}>
+            <ul>
+              <lh>shakes:</lh>
+              <li>17-24 grams of protein</li>
+              <li>145-250 calories</li>
+              <li>low sugar</li>
+              <li>21 essential vitamins and nutrients</li>
+            </ul>
+            <ul>
+              <lh>teas:</lh>
+              <li>boost metabolism</li>
+              <li>burn 80-100 calories</li>
+              <li>under 25 calories</li>
+              <li>0 grams of sugar</li>
+              <li>SAFE ENERGY, no crash!</li>
+            </ul>
+            <ul>
+              <lh>iced coffees:</lh>
+              <li>100 calories</li>
+              <li>15 grams of protein</li>
+              <li>only 2 grams of sugar</li>
+            </ul>
+          </aside>
+            <h1>Drink Menu</h1>
+
+          </div>
           <div id={styles.menuLinkHolder}>
           <Link href="#group"><a>Popular Picks</a></Link>
           <Link href="#group1"><a>Smoothie & Tropical</a></Link>
@@ -223,6 +243,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           <Link href="#group8"><a>Vegan Shake Options</a></Link>
           <Link href="#group9"><a>Seasonal Shakes</a></Link>
           <Link href="#group10"><a>Seasonal Teas</a></Link>
+          <Link href="/"><a>Combinations</a></Link>
           <Link href="#treats"><a>Treats</a></Link>
         </div>
         </section>
