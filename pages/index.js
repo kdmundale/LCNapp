@@ -55,6 +55,11 @@ export async function getStaticProps () {
     text: 'SELECT * FROM shakes WHERE shake_group = $1 AND available=$2',
     values:[10,true],
   }
+
+  const query11 = {
+    text: 'SELECT * FROM shakes WHERE shake_group = $1 AND available=$2',
+    values:[11,true],
+  }
   try {
     const res1 = await db.query(query1)
     const res2 = await db.query(query2)
@@ -66,6 +71,7 @@ export async function getStaticProps () {
     const res8 = await db.query(query8)
     const res9 = await db.query(query9)
     const res10 = await db.query(query10)
+    const res11 = await db.query(query11)
     const messRes1= await db.query(messQuery1)
     const messRes2= await db.query(messQuery2)
     console.log(messRes1.rowCount)
@@ -79,17 +85,18 @@ export async function getStaticProps () {
     const shakeData8 = res8.rows
     const shakeData9 = res9.rows
     const shakeData10 = res10.rows
+    const shakeData11 = res11.rows
     const msg1 = messRes1.rows
     const msg2 = messRes2.rows
     return {
-      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,msg1,msg2}
+      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11,msg1,msg2}
     }
   } catch (err) {
     console.log(err.stack)
   }
 }
 
-export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10, msg1, msg2}) {
+export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11, msg1, msg2}) {
 
   const message1 = msg1.map((c) =>
       <div key={c.id}>
@@ -131,6 +138,9 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
       <p key={c.id}>{c.name}</p>
   )
   const shakes10 = shakeData10.map((c) =>
+      <p key={c.id}>{c.name}</p>
+  )
+  const shakes11 = shakeData11.map((c) =>
       <p key={c.id}>{c.name}</p>
   )
 
@@ -195,83 +205,93 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           <span className={styles.anchor} id="menu"/>
           <h1>Drink Menu</h1>
           <div id={styles.menuLinkHolder}>
-          <Link href="#group1"><a>group 1</a></Link>
-          <Link href="#group2"><a>group 2</a></Link>
-          <Link href="#group3"><a>group 3</a></Link>
-          <Link href="#group4"><a>group 4</a></Link>
-          <Link href="#group5"><a>group 5</a></Link>
-          <Link href="#group6"><a>group 6</a></Link>
-          <Link href="#group7"><a>group 7</a></Link>
-          <Link href="#group8"><a>group 8</a></Link>
-          <Link href="#group9"><a>group 9</a></Link>
-          <Link href="#group10"><a>group 10</a></Link>
-          <Link href="#treats"><a>treats</a></Link>
+          <Link href="#group"><a>Popular Picks</a></Link>
+          <Link href="#group1"><a>Smoothie & Tropical</a></Link>
+          <Link href="#group2"><a>Coffee Flavors</a></Link>
+          <Link href="#group3"><a>Cakes & Pies Flavors</a></Link>
+          <Link href="#group4"><a>Candy & Sweets</a></Link>
+          <Link href="#group5"><a>Specialty Flavors</a></Link>
+          <Link href="#group6"><a>Lifted Mega Teas</a></Link>
+          <Link href="#group7"><a>Iced Coffees</a></Link>
+          <Link href="#group8"><a>Vegan Shake Options</a></Link>
+          <Link href="#group9"><a>Seasonal Shakes</a></Link>
+          <Link href="#group10"><a>Seasonal Teas</a></Link>
+          <Link href="#treats"><a>Treats</a></Link>
+        </div>
+        </section>
+        <section>
+          <span className={styles.anchor} id="group"/>
+          <h2>Popular Picks</h2>
+          <div>
+            {shakes11}
           </div>
+        </section>
+        <section>
           <span className={styles.anchor} id="group1"/>
-          <h2>Group 1</h2>
+          <h2>Smoothie & Tropical</h2>
           <div>
             {shakes1}
           </div>
         </section>
         <section>
           <span className={styles.anchor} id="group2"/>
-          <h2>Group 2</h2>
+          <h2>Coffee Flavors</h2>
           <div>
             {shakes2}
           </div>
         </section>
         <section>
           <span className={styles.anchor} id="group3"/>
-          <h2>Group 3</h2>
+          <h2>Cakes & Pies Flavors</h2>
           <div>
             {shakes3}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group4"/>
-          <h2>Group 4</h2>
+          <h2>Candy & Sweets</h2>
           <div>
             {shakes4}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group5"/>
-          <h2>Group 5</h2>
+          <h2>Specialty Flavors</h2>
           <div>
             {shakes5}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group6"/>
-          <h2>Group 6</h2>
+          <h2>Lifted Mega Teas</h2>
           <div>
             {shakes6}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group7"/>
-          <h2>Group 7</h2>
+          <h2>Iced Coffees</h2>
           <div>
             {shakes7}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group8"/>
-          <h2>Group 8</h2>
+          <h2>Vegan Shake Options</h2>
           <div>
             {shakes8}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="group9"/>
-          <h2>Group 9</h2>
+          <h2>Seasonal Shakes</h2>
           <div>
             {shakes9}
           </div>
         </section>
         <section>
         <span className={styles.anchor} id="teas"/>
-          <h2>Group 10</h2>
+          <h2>Seasonal Teas</h2>
           <div>
             {shakes10}
           </div>
@@ -284,6 +304,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
             <p>protein doughnuts</p>
             <p>protein balls</p>
             <p>protein bars</p>
+            <p>waffles</p>
           </div>
         </section>
       </article>
