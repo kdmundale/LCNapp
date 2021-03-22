@@ -188,7 +188,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
             <Link href="#treats">
               <a id={styles.pic3}><div>treats</div></a>
             </Link>
-            <Link href="/">
+            <Link href="#about">
               <a id={styles.pic4}><div>about us</div></a>
             </Link>
 
@@ -337,6 +337,15 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
             <p>waffles</p>
           </div>
         </section>
+      </article>
+      <span className={styles.anchor} id="about"/>
+      <article className={styles.health}>
+      <section>
+      <h1>About Us</h1>
+      <p>Information about us, our beginning, our mission, etc.</p>
+      <h1>Health & Wellness</h1>
+      <p>more information about health and wellness, challenges, etc</p>
+      </section>
       </article>
       <Footer/>
     </div>
