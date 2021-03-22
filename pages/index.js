@@ -191,6 +191,8 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
             <Link href="/">
               <a id={styles.pic4}><div>about us</div></a>
             </Link>
+
+            <span className={styles.anchor} id="herbal"/>
         </div>
 
         <section id={styles.herbalife}>
