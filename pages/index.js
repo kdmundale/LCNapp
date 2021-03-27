@@ -60,6 +60,11 @@ export async function getStaticProps () {
     text: 'SELECT * FROM shakes WHERE shake_group = $1 AND available=$2',
     values:[11,true],
   }
+
+  const query_pricing = {
+    text: 'SELECT * FROM pricing',
+  }
+
   try {
     const res1 = await db.query(query1)
     const res2 = await db.query(query2)
@@ -74,6 +79,7 @@ export async function getStaticProps () {
     const res11 = await db.query(query11)
     const messRes1= await db.query(messQuery1)
     const messRes2= await db.query(messQuery2)
+    const resPricing = await db.query(query_pricing)
     console.log(messRes1.rowCount)
     const shakeData2 = res2.rows
     const shakeData1 = res1.rows
@@ -88,15 +94,16 @@ export async function getStaticProps () {
     const shakeData11 = res11.rows
     const msg1 = messRes1.rows
     const msg2 = messRes2.rows
+    const pricing = resPricing.rows
     return {
-      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11,msg1,msg2}
+      props: {shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11,msg1,msg2, pricing}
     }
   } catch (err) {
     console.log(err.stack)
   }
 }
 
-export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11, msg1, msg2}) {
+export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeData5,shakeData6,shakeData7,shakeData8,shakeData9,shakeData10,shakeData11, msg1, msg2, pricing}) {
 
   const message1 = msg1.map((c) =>
       <div key={c.id}>
@@ -142,6 +149,16 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
   )
   const shakes11 = shakeData11.map((c) =>
       <p key={c.id}>{c.name}</p>
+  )
+  const items_pricing = pricing.map((c) =>
+      <table className={styles.combo_holder} key={c.id}>
+      <tr>
+      <td className={styles.combo}>{c.name}. . . . .{c.price}</td>
+      </tr>
+      <tr>
+      <td className={styles.combo_desc}>{c.description}</td>
+      </tr>
+      </table>
   )
 
   return (
@@ -234,6 +251,7 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
 
           </div>
           <div id={styles.menuLinkHolder}>
+          <Link href="#combos"><a>Combos & Pricing</a></Link>
           <Link href="#group"><a>Popular Picks</a></Link>
           <Link href="#group1"><a>Smoothie & Tropical</a></Link>
           <Link href="#group2"><a>Coffee Flavors</a></Link>
@@ -245,9 +263,15 @@ export default function Home({shakeData1,shakeData2,shakeData3,shakeData4,shakeD
           <Link href="#group8"><a>Vegan Shake Options</a></Link>
           <Link href="#group9"><a>Seasonal Shakes</a></Link>
           <Link href="#group10"><a>Seasonal Teas</a></Link>
-          <Link href="/"><a>Combinations</a></Link>
           <Link href="#treats"><a>Treats</a></Link>
         </div>
+        </section>
+        <section>
+          <span className={styles.anchor} id="combos"/>
+          <h2>Combos & Pricing</h2>
+          <div>
+            {items_pricing}
+          </div>
         </section>
         <section>
           <span className={styles.anchor} id="group"/>

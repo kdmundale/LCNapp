@@ -370,6 +370,23 @@
   background-color:#d1dde6;
 }
 
+.combo_holder {
+  margin: 2rem auto;
+  padding: 0 3rem;
+}
+
+.combo {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.combo_desc {
+  font-family: 'Roboto';
+  font-variant: normal;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
 @media only screen and (min-width: 620px){
   .main {
     width:80%;
