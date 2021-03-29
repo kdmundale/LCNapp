@@ -89,6 +89,7 @@ export async function getStaticProps () {
     const shakeData6 = res6.rows
     const shakeData7 = res7.rows
     const shakeData8 = res8.rows
+    console.log(res8.rowCount, "!!!!!!!!!!!!!!!!!!!!!")
     const shakeData9 = res9.rows
     const shakeData10 = res10.rows
     const shakeData11 = res11.rows
