@@ -7,16 +7,24 @@ export default function Banner(){
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 7
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 2401 },
       items: 5
     },
+    desktop: {
+      breakpoint: { max: 2400, min: 2001 },
+      items: 3.5
+    },
+    desktop: {
+      breakpoint: { max: 2000, min: 1600 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 1600, min: 1224 },
+      items: 2.5
+    },
     tablet: {
-      breakpoint: { max: 1024, min: 720 },
-      items: 4
+      breakpoint: { max: 1224, min: 720 },
+      items: 2.5
     },
     mobile: {
       breakpoint: { max: 720, min: 0 },

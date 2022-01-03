@@ -2,8 +2,7 @@
   border-left: 2px solid #a4b0a4;
   border-right: 2px solid #a4b0a4;
   margin-top: 2rem;
-  width:90%;
-  max-width: 1200px;
+  max-width: 100vw;
 }
 
 .main div{
@@ -12,26 +11,26 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 10.5rem;
+  height: 50vw;
 }
 
 .main div img{
   padding: 0;
   margin: 0;
-  height: 10rem;
   background: white;
+  margin-left: 2vw;
 }
 
 @media only screen and (min-width: 620px){
 
   .main {
+
     margin-top: 2rem;
-    width:80%;
   }
 }
 
-@media only screen and (min-width: 1020px){
+@media only screen and (min-width: 1000px){
   .main {
-    max-width: 1200px;
+  height:40rem;
   }
 }
